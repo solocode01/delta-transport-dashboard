@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Delta State Transport Survey: Findings & Actions</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Delta State Transport Survey: From Data to Decisions</h1>
+        <p>
+          Export your Google Form responses as CSV (Responses tab → Link to
+          Sheets → File → Download → CSV), then load the file here. All analysis
+          runs in your browser; nothing is uploaded.
+        </p>
+        <div class="load">
+          <label class="btn pri" tabindex="-1"
+            >Load responses CSV<input
+              type="file"
+              id="file"
+              accept=".csv,text/csv"
+          /></label>
+          <button id="demo">Try sample data</button>
+          <span id="msg">No data loaded yet.</span>
+        </div>
+      </header>
+      <div id="dash">
+        <div class="load" style="margin: 0 0 6px">
+          <label for="lga">Area:</label
+          ><select id="lga"></select>
+          <span id="count" class="note"></span>
+        </div>
+        <section><div class="kpis" id="kpis"></div></section>
+        <section>
+          <h2>Recommendations</h2>
+          <div id="recs"></div>
+          <p class="note" id="small"></p>
+        </section>
+        <section>
+          <h2>Service ratings</h2>
+          <div class="card" id="scores"></div>
+        </section>
+        <section>
+          <h2>Problems and causes</h2>
+          <div class="grid" id="g1"></div>
+        </section>
+        <section>
+          <h2>Travel experience</h2>
+          <div class="grid" id="g2"></div>
+        </section>
+        <section>
+          <h2>Safety and priorities</h2>
+          <div class="grid" id="g3"></div>
+        </section>
+        <section>
+          <h2>Areas needing attention most</h2>
+          <div class="card wrap" id="areas"></div>
+          <p class="note">
+            Ranked by average satisfaction (lowest first). Areas with fewer than
+            5 responses are shown but should be read with care.
+          </p>
+        </section>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
